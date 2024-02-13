@@ -12,6 +12,7 @@ $black-color: #28282B;
 *{
     margin: 0;
     padding: 0;
+    scroll-behavior: contain;
 }
 
 body{
@@ -27,8 +28,8 @@ body{
     }
 }
 
-
-// .preloader  {
+// Preloader af timeglas
+.preloader  {
     background-color: #000;
     height: 100%;
     width: 100%;
@@ -36,17 +37,17 @@ body{
     top: 0;
     left: 0;
     z-index: 999;
-    overflow: hidden; /* Ensure content doesn't overflow */
-    transition: transform 0.5s ease; /* Add transition effect */
+    overflow: hidden;
+    transition: transform 0.5s ease; 
 
     &.hidden  {
-        transform: translateY(-100%); /* Move preloader above viewport */
+        transform: translateY(-100%); 
     }
     
         .video-loader{
             width: 100%;
             height: 100%;
-            scale: 20%;
+            scale: 25%;
         }
 }
 
@@ -60,7 +61,7 @@ body{
     ul{
         display: flex;
         list-style-type: none;
-        gap: 75px;
+        gap: 50px;
     }
         li{
             font-family: $font-overskrift;
@@ -98,7 +99,14 @@ body{
     gap: 30px;
 
     div {
-        margin-top: 100px;
+        margin-top: 10em;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
-    
+}
+
+.digital-storytelling{
+    background-color: $primary-color;
+    height: 100vh;
 }
