@@ -1,6 +1,7 @@
 //Variabler
 $bg-color: #fff;
 $font-overskrift: Futura PT;
+$font-p: Helvetica;
 
 //Colors
 $primary-color: #3454D1;
@@ -20,10 +21,14 @@ body{
         h1{
             font-size: 5.5vw;
         }
+
+    p {
+        font-family: $font-p ;
+    }
 }
 
 
-.preloader {
+// .preloader  {
     background-color: #000;
     height: 100%;
     width: 100%;
@@ -34,7 +39,7 @@ body{
     overflow: hidden; /* Ensure content doesn't overflow */
     transition: transform 0.5s ease; /* Add transition effect */
 
-    &.hidden {
+    &.hidden  {
         transform: translateY(-100%); /* Move preloader above viewport */
     }
     
@@ -88,4 +93,12 @@ body{
 
 .hero {
     height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    div {
+        margin-top: 100px;
+    }
+    
 }
