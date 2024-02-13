@@ -10,7 +10,20 @@
 </head>
 <body>
     <div class="preloader">
+        <video autoplay loop muted class="video-loader">
+            <source src="animationer/timeglas.mp4" type="video/mp4">
+        </video>
     </div>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var preloader = document.querySelector('.preloader');
+    setTimeout(function() {
+        preloader.classList.add('hidden'); // Add 'hidden' class after 2.5 seconds
+    }, 2500);
+});
+
+    </script>
 
     <header>
         <div class="header-computer">
@@ -34,7 +47,7 @@
     </header>
 
     <main>
-        <section>
+        <section class="hero">
             <h1>Story in Time</h1>
         </section>
 
