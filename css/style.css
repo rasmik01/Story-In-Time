@@ -1,1 +1,42 @@
-/*# sourceMappingURL=style.css.map */
+body h1, body h2, body h3, body h4, body h5 {
+  font-family: Futura PT;
+}
+body h1 {
+  font-size: 5.5vw;
+}
+
+.header-computer {
+  display: grid;
+  grid-template-columns: 15% 1fr 15%;
+  justify-items: center;
+  align-items: center;
+}
+.header-computer ul {
+  display: flex;
+  list-style-type: none;
+  gap: 75px;
+}
+.header-computer li {
+  font-family: Futura PT;
+  font-size: 18px;
+  color: #28282B;
+}
+.header-computer a {
+  font-family: Futura PT;
+  font-size: 18px;
+  color: #28282B;
+  text-decoration: none;
+}
+.header-computer .sighej {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-computer .sighej img {
+  max-width: 100%;
+  width: 20px;
+}
+.header-computer .sighej:hover img {
+  transform: rotate(-25deg);
+  transition: 0.2s ease-in-out;
+}/*# sourceMappingURL=style.css.map */

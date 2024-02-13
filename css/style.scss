@@ -1,9 +1,59 @@
 //Variabler
 $bg-color: #fff;
-$primary-color:
-$font: Futura
-$text-color: #28282B;
+$font-overskrift: Futura PT;
 
-body {
-    background-color: $text-color;
+//Colors
+$primary-color: #3454D1;
+$secondary-color: #D2FF28;
+$red-color: #F71735;
+$black-color: #28282B;
+
+body{
+    h1, h2, h3, h4, h5 {
+        font-family: $font-overskrift;
+    }
+        h1{
+            font-size: 5.5vw;
+        }
+}
+
+.header-computer{
+    display: grid;
+    grid-template-columns: 15% 1fr 15%;
+    justify-items: center;
+    align-items: center;
+
+    ul{
+        display: flex;
+        list-style-type: none;
+        gap: 75px;
+    }
+        li{
+            font-family: $font-overskrift;
+            font-size: 18px;
+            color: $black-color;
+        }
+
+    a {
+        font-family: $font-overskrift;
+        font-size: 18px;
+        color: $black-color;
+        text-decoration: none;
+    }
+
+    .sighej {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img{
+            max-width: 100%;
+            width: 20px;
+        }
+    }
+    .sighej:hover img {
+        transform:rotate(-25deg);
+        transition: 0.2s ease-in-out;
+    }
+
 }
