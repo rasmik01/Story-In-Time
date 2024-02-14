@@ -1,11 +1,15 @@
 * {
   margin: 0;
   padding: 0;
-  scroll-behavior: contain;
 }
 
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 body h1, body h2, body h3, body h4, body h5 {
   font-family: Futura PT;
+  color: #28282B;
 }
 body h1 {
   font-size: 5.5vw;
@@ -14,8 +18,20 @@ body p {
   font-family: Helvetica;
 }
 
+.btn {
+  background-color: #28282B;
+  color: white;
+  font-family: Futura PT;
+  text-decoration: none;
+  text-align: center;
+  padding: 16px 32px 16px 32px;
+  border-radius: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .preloader {
-  background-color: #000;
+  background-color: #28282B;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -72,10 +88,14 @@ body p {
 }
 
 .hero {
+  z-index: 2;
   height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  background-image: url("../img/hero-bg.png");
+  background-size: cover;
+  background-position: center;
 }
 .hero div {
   margin-top: 10em;
@@ -84,7 +104,7 @@ body p {
   gap: 20px;
 }
 
-.digital-storytelling {
-  background-color: #3454D1;
+
+.cta {
   height: 100vh;
 }/*# sourceMappingURL=style.css.map */

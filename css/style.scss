@@ -12,12 +12,12 @@ $black-color: #28282B;
 *{
     margin: 0;
     padding: 0;
-    scroll-behavior: contain;
 }
 
 body{
     h1, h2, h3, h4, h5 {
         font-family: $font-overskrift;
+        color: $black-color;
     }
         h1{
             font-size: 5.5vw;
@@ -26,11 +26,27 @@ body{
     p {
         font-family: $font-p ;
     }
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+//button
+.btn{
+    background-color: $black-color;
+    color: white;
+    font-family: $font-overskrift;
+    text-decoration: none;
+    text-align: center;
+    padding: 16px 32px 16px 32px;
+    border-radius: 10px;
+    width: fit-content;
 }
 
 // Preloader af timeglas
 .preloader  {
-    background-color: #000;
+    background-color: $black-color;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -90,13 +106,18 @@ body{
         transform:rotate(-25deg);
         transition: 0.2s ease-in-out;
     }
+
 }
 
 .hero {
+    z-index: 2;
     height: 90vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    background-image: url('../img/hero-bg.png');
+    background-size: cover;
+    background-position: center;
 
     div {
         margin-top: 10em;
@@ -106,7 +127,47 @@ body{
     }
 }
 
-.digital-storytelling{
+.scroll-container {
     background-color: $primary-color;
+    height: 100vh;
+    width: 500%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.panel,
+.last-panel {
+  width: 50vw;
+  flex: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: white;
+}
+
+.panel:nth-child(odd) {
+  background-color: $primary-color;
+  color:white;
+}
+
+@media (max-width: 767px) {
+  .container {
+    display: block;
+  }
+  .panel {
+    background-color: lightpink;
+    width: 100%;
+  }
+}
+
+
+.cta {
     height: 100vh;
 }
