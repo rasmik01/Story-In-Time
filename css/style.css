@@ -80,7 +80,7 @@ body p {
 }
 .header-computer .sighej img {
   max-width: 100%;
-  width: 20px;
+  width: 25px;
 }
 .header-computer .sighej:hover img {
   transform: rotate(-25deg);
