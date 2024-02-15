@@ -7,7 +7,7 @@ $font-p: Helvetica;
 $primary-color: #3454D1;
 $secondary-color: #D2FF28;
 $red-color: #F71735;
-$black-color: #28282B;
+$black-color: #2e2e30;
 
 *{
     margin: 0;
@@ -54,7 +54,7 @@ body{
     left: 0;
     z-index: 999;
     overflow: hidden;
-    transition: transform 0.5s ease; 
+    transition: transform 0.8s ease; 
 
     &.hidden  {
         transform: translateY(-100%); 
