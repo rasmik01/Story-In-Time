@@ -275,6 +275,7 @@ main {
                 display: flex;
                 gap: 10px;
                 text-decoration: none;
+                align-items: center;
             }
 
              
@@ -291,6 +292,23 @@ main {
                     color: white;
                     font-size: 16px;
                 }
+            
+            .scroll-to-top{
+
+                a{
+                    display: flex;
+                    align-items: center;
+                }
+                i, p {
+                    text-transform: uppercase;
+                }
+                i {
+                    color: $primary-color;
+                    background-color: white ;
+                    border-radius: 50px;
+                    padding: 10px 12px 10px 12px;
+                }
+            }
     }
   }
 

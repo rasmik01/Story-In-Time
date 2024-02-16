@@ -229,6 +229,7 @@ footer .column-first .oplysninger div, footer .column-first .oplysninger a {
   display: flex;
   gap: 10px;
   text-decoration: none;
+  align-items: center;
 }
 footer .column-first .oplysninger i {
   color: white;
@@ -238,6 +239,19 @@ footer .column-first .oplysninger p {
   font-family: Futura PT;
   color: white;
   font-size: 16px;
+}
+footer .column-first .oplysninger .scroll-to-top a {
+  display: flex;
+  align-items: center;
+}
+footer .column-first .oplysninger .scroll-to-top i, footer .column-first .oplysninger .scroll-to-top p {
+  text-transform: uppercase;
+}
+footer .column-first .oplysninger .scroll-to-top i {
+  color: #3454D1;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px 12px 10px 12px;
 }
 footer .column-second {
   display: flex;
