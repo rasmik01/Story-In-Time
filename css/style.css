@@ -294,6 +294,9 @@ footer .column-second .sendbesked a {
     max-width: 100%;
     width: 40px;
   }
+  .preloader .video-loader {
+    scale: 75%;
+  }
   .header-computer {
     display: none;
   }
