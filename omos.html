@@ -9,30 +9,14 @@
     <script src="https://kit.fontawesome.com/2a7263a17a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-     <div   class="preloader"> 
-        <video   autoplay loop muted class="video-loader">
-            <source   src="animationer/timeglas_28282b (1).mp4" type="video/mp4"> 
-        </video>
-    </div>
-
-    <script >
-  document.addEventListener("DOMContentLoaded", function() {
-    var preloader = document.querySelector('.preloader');
-    setTimeout(function() {
-        preloader.classList.add('hidden'); // Ændringer tiden på hvor lang tid preloader skal være der
-    }, 1000);
-});
-    </script>
-
     <header id="header">
         <div class="header-computer">
             <img src="" alt="">
             <nav>
                 <ul>
-                    <a href="#"><li class="active">Forside</li></a>
+                    <a href="index.html"><li class=>Forside</li></a>
                     <a href="#"><li class=>Cases</li></a>
-                    <a href="omos.html"><li class=>Om os</li></a>
+                    <a href="omos.html"><li class="active">Om os</li></a>
                 </ul>
             </nav>
             <div class="sighej">
@@ -50,60 +34,18 @@
     </header>
 
     <main>
-        <section class="hero">
-            <img src="" alt="">
+        <section class="hero-omos">
+            <div class="hero-first-column">
+                <h1>Hvem er <br> vi?</h1>
+                <img src="" alt="">
+                <p></p>
+            </div>
             <div>
-                <h1>Story in Time</h1>
-                <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae hic rem incidunt temporibus, repellat ducimus?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum unde dolor quisquam similique maiores sint, in ea provident facere quis soluta natus consectetur, dignissimos voluptatem nam qui neque aperiam explicabo.</p>
-                <a class="btn" href="#">Læs mere om</a>
+                <h2>Vi hjælper med at fotælle din kommende story.</h2>
             </div>
         </section>
-
-        <section class="scroll-container">
-        </section>
-
-        <section class="cases">
-            <div class="first-column-cases">
-                <div class="cases-div">
-                    <img class="img-one" src="img/aleksandr-popov-7PJ4Rg9Lk0k-unsplash.jpg" alt="vuffeli">
-                    <h4>Vuffeli</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, nesciunt.</p>
-                </div>
-                <div class="cases-div">
-                    <img class="img-two" src="img/aleksandr-popov-7PJ4Rg9Lk0k-unsplash.jpg" alt="vuffeli">
-                    <h4>Vuffeli</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, nesciunt.</p>
-                </div>
-            </div>
-            <div class="second-column-cases">
-                <div class="cases-div">
-                    <img class="img-one" src="img/aleksandr-popov-7PJ4Rg9Lk0k-unsplash.jpg" alt="vuffeli">
-                    <h4>Vuffeli</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, nesciunt.</p>
-                </div>
-                <div class="cases-div">
-                    <img class="img-two" src="img/aleksandr-popov-7PJ4Rg9Lk0k-unsplash.jpg" alt="vuffeli">
-                    <h4>Vuffeli</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, nesciunt.</p>
-                </div>
-
-            </div>
-            <div class="third-column-cases">
-                <div class="cases-div">
-                    <img class="img-one" src="img/aleksandr-popov-7PJ4Rg9Lk0k-unsplash.jpg" alt="vuffeli">
-                    <h4>Vuffeli</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, nesciunt.</p>
-                </div>
-                <div class="cases-div">
-                    <img class="img-two" src="img/aleksandr-popov-7PJ4Rg9Lk0k-unsplash.jpg" alt="vuffeli">
-                    <h4>Vuffeli</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, nesciunt.</p>
-                </div>
-            </div>
-        </section>
-        
     </main>
+
 
     <footer>
         <div class="footer-title">
@@ -169,8 +111,3 @@
             </div>
         </div>
     </footer>
-
-
-    
-</body>
-</html>
