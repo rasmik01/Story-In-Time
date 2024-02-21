@@ -40,14 +40,16 @@ body{
 
 //button
 .btn{
-    background-color: $black-color;
-    color: white;
+    background-color: $secondary-color;
+    color: $black-color;
     font-family: $font-overskrift;
     text-decoration: none;
     text-align: center;
     padding: 16px 32px 16px 32px;
-    border-radius: 10px;
+    border-radius: 5px;
     width: fit-content;
+    border: 1.5px solid $black-color;
+    box-shadow: 5px 5px;
 }
 
 // Preloader af timeglas
@@ -154,7 +156,7 @@ main {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
     }
   }
   
@@ -167,14 +169,64 @@ main {
 
   //Cases 
   .cases {
-    height: 100vh;
+    height: 100%;
     background-color: white;
     display: grid;
     z-index: 3;
     margin-bottom: 80vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 100px;
+    padding: 50px;
+        .first-column-cases, .second-column-cases, .third-column-cases {
+            width: 100%;
+            display: grid;
+            gap: 100px;
+            .cases-div {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+                .img-one {
+                    height: 400px;
+                }
+                .img-two {
+                    height: 500px;
+                }
+            }
+            }
+        .second-column-cases {
+            padding-top: 100px;
+            gap: 120px;
+            .cases-div{
+                .img-one {
+                    height: 300px;
+                }
 
-  }
+                .img-two {
+                    height: 600px;
+                }
+            }
+            
+        }
+        .third-column-cases {
+            padding-top: 100px;
+            gap: 120px;
+            .cases-div{
+                .img-one {
+                    height: 350px;
+                }
 
+                .img-two {
+                    height: 200px;
+                }
+            }
+            
+        }
+    }
 
 
 
