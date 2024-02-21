@@ -193,6 +193,24 @@ main {
   height: 200px;
 }
 
+.hero-omos {
+  height: 100vh;
+  margin-bottom: 80vh;
+  background-color: #3454D1;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 30px;
+}
+.hero-omos .hero-first-column {
+  background-color: white;
+  display: grid;
+  height: 100%;
+  justify-content: center;
+}
+.hero-omos .hero-first-column h1 {
+  color: #3454D1;
+}
+
 footer {
   width: 100%;
   background-color: #3454D1;
