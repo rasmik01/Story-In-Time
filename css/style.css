@@ -65,10 +65,13 @@ body p {
   height: 10vh;
   background-color: white;
 }
+.header-computer a img {
+  width: 50px;
+}
 .header-computer ul {
   display: flex;
   list-style-type: none;
-  gap: 50px;
+  gap: 100px;
 }
 .header-computer li {
   font-family: Futura PT;
@@ -112,12 +115,12 @@ body p {
 }
 
 main {
-  position: relative; /* Ensure stacking context */
-  z-index: 2; /* Ensure main content is above footer */
+  position: relative;
+  z-index: 2;
 }
 
 .hero {
-  z-index: 3; /* Ensure hero section is above footer */
+  z-index: 3;
   height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -125,6 +128,10 @@ main {
   background-image: url("../img/hero-bg.jpg");
   background-size: cover;
   background-position: center;
+}
+.hero video {
+  max-width: 100%;
+  width: 100%;
 }
 .hero div {
   display: flex;
@@ -165,78 +172,113 @@ main {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
-}
-.cases .first-column-cases .cases-div .img-one, .cases .second-column-cases .cases-div .img-one, .cases .third-column-cases .cases-div .img-one {
   height: 400px;
-}
-.cases .first-column-cases .cases-div .img-two, .cases .second-column-cases .cases-div .img-two, .cases .third-column-cases .cases-div .img-two {
-  height: 500px;
-}
-.cases .second-column-cases {
-  padding-top: 100px;
-  gap: 120px;
-}
-.cases .second-column-cases .cases-div .img-one {
-  height: 300px;
-}
-.cases .second-column-cases .cases-div .img-two {
-  height: 600px;
-}
-.cases .third-column-cases {
-  padding-top: 100px;
-  gap: 120px;
-}
-.cases .third-column-cases .cases-div .img-one {
-  height: 350px;
-}
-.cases .third-column-cases .cases-div .img-two {
-  height: 200px;
 }
 
 .hero-omos {
-  height: 90vh;
-  margin-bottom: 80vh;
-  background-color: #3454D1;
   display: grid;
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: 1.1fr 0.5fr;
   gap: 30px;
-}
-.hero-omos .hero-first-column {
+  align-items: center;
   background-color: white;
-  padding: 50px;
-  display: grid;
+  padding: 0px 75px 0px 75px;
   height: 100%;
-  justify-content: center;
-  align-items: start;
 }
-.hero-omos .hero-first-column h1 {
-  color: #3454D1;
-  z-index: 3;
+.hero-omos img {
+  max-width: 100%;
 }
-.hero-omos .hero-first-column img {
-  width: 15em;
-  z-index: 2;
+.hero-omos div h1 {
+  font-size: 5vw;
 }
-.hero-omos .hero-first-column div {
+
+.coworker {
+  margin-bottom: 80vh;
+  background-color: white;
+  padding: 0px 75px 100px 75px;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+
+aside {
+  height: 40vh;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
+  position: sticky;
+  top: 7em;
+  z-index: 10;
 }
-.hero-omos .hero-first-column div p {
-  color: #3454D1;
+aside a {
+  text-decoration: none;
+  color: #2e2e30;
+}
+aside a div {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+}
+aside a div p {
   font-family: Futura PT;
-  font-size: 30px;
+  font-size: 20px;
+  opacity: 70%;
 }
-.hero-omos .hero-second-column {
+aside a div i {
+  font-size: 20px;
+  color: #3454D1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+aside a:hover i {
+  opacity: 1;
+}
+aside a:hover p {
+  opacity: 1;
+}
+
+.coworker-second-column {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  gap: 50px;
-  padding: 50px;
+  gap: 10em;
 }
-.hero-omos .hero-second-column h2 {
-  font-size: 7vw;
-  color: white;
+.coworker-second-column .solo {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.coworker-second-column .solo .person-tekst {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.coworker-second-column .solo .person-tekst .name {
+  font-size: 25px;
+}
+.coworker-second-column .solo .person-tekst .work {
+  font-size: 20px;
+}
+.coworker-second-column .solo .person-tekst .contact-info {
+  display: flex;
+  gap: 50px;
+  margin-top: 40px;
+}
+.coworker-second-column .solo .person-tekst .contact-info div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.coworker-second-column .solo .person-tekst .contact-info a {
+  text-decoration: none;
+  color: #2e2e30;
+  font-family: Futura PT;
+  font-size: 18px;
+}
+.coworker-second-column .solo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 400px;
+  width: 400px;
+  border-radius: 30px;
 }
 
 footer {
@@ -411,19 +453,19 @@ footer .column-second .sendbesked a {
     background-image: url("../img/hero-bg-mobile.jpg");
     background-size: cover;
     grid-template-columns: 1fr;
-    padding: 40px 20px 0px 20px;
-    grid-template-rows: 1fr 1fr;
+    padding: 20px 20px 0px 20px;
+    grid-template-rows: 0.7fr 1fr;
     gap: 10px;
     height: 92vh;
   }
-  .hero img {
+  .hero div {
+    gap: 15px;
+  }
+  .hero video {
     order: 2;
   }
   .hero h1 {
     font-size: 50px;
-  }
-  .cases {
-    margin-bottom: 100vh;
   }
   footer {
     grid-template-columns: 1fr;

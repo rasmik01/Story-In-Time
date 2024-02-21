@@ -85,11 +85,16 @@ body{
     align-items: center;
     height: 10vh;
     background-color: white;
+        a {
+            img {
+                width: 50px;
+            }
+        }
 
     ul{
         display: flex;
         list-style-type: none;
-        gap: 50px;
+        gap: 100px;
     }
         li{
             font-family: $font-overskrift;
@@ -138,12 +143,12 @@ body{
 
 }
 main {
-    position: relative; /* Ensure stacking context */
-    z-index: 2; /* Ensure main content is above footer */
+    position: relative; 
+    z-index: 2; 
   }
   
   .hero {
-    z-index: 3; /* Ensure hero section is above footer */
+    z-index: 3; 
     height: 90vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -151,6 +156,11 @@ main {
     background-image: url('../img/hero-bg.jpg');
     background-size: cover;
     background-position: center;
+        video {
+            max-width: 100%;
+            width: 100%;
+            
+        }
   
     div {
       display: flex;
@@ -189,43 +199,11 @@ main {
                     width: 100%;
                     object-fit: cover;
                     border-radius: 10px;
-                }
-                .img-one {
                     height: 400px;
                 }
-                .img-two {
-                    height: 500px;
-                }
             }
             }
-        .second-column-cases {
-            padding-top: 100px;
-            gap: 120px;
-            .cases-div{
-                .img-one {
-                    height: 300px;
-                }
 
-                .img-two {
-                    height: 600px;
-                }
-            }
-            
-        }
-        .third-column-cases {
-            padding-top: 100px;
-            gap: 120px;
-            .cases-div{
-                .img-one {
-                    height: 350px;
-                }
-
-                .img-two {
-                    height: 200px;
-                }
-            }
-            
-        }
     }
 
     //Cases side
@@ -234,54 +212,119 @@ main {
 
     //Om os side 
     .hero-omos {
-        height: 90vh;
-        margin-bottom: 80vh;
-        background-color: $primary-color;
         display: grid;
-        grid-template-columns: 40% 1fr;
+        grid-template-columns: 1.1fr 0.5fr;
         gap: 30px;
-        .hero-first-column{
-            background-color: white;
-            padding: 50px;
-            display: grid;
-            height: 100%;
-            justify-content: center;
-            align-items: start;
+        align-items: center;
+        background-color: white;
+        padding: 0px 75px 0px 75px;
+        height: 100%;
+        img {
+            max-width: 100%;
+        }
+        div {
             h1 {
-                color: $primary-color;
-                z-index: 3;
+                font-size: 5vw;
             }
-            img {
-                width: 15em;
-                z-index: 2;
-            }
+        }
+    }
+
+    .coworker {
+        margin-bottom: 80vh;
+        background-color: white;
+        padding: 0px 75px 100px 75px;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+    }
+    
+    aside {
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        position: sticky;
+        top: 7em;
+        z-index: 10; 
+        a {
+            text-decoration: none;
+            color: $black-color;
             div {
                 display: flex;
-                flex-direction: column;
-                gap: 10px;
+                align-items: center;
+                gap: 75px;
                 p {
-                    color: $primary-color;
                     font-family: $font-overskrift;
-                    font-size: 30px;
-                    
+                    font-size: 20px;
+                    opacity: 70%;
+                }
+                i {
+                    font-size: 20px;
+                    color: $primary-color;
+                    opacity: 0; // Hide the i element by default
+                    transition: opacity 0.3s ease; // Add transition for smooth fade in
                 }
             }
-        }
-        .hero-second-column {
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            gap: 50px;
-            padding: 50px;
-            h2 {
-                font-size: 7vw;
-                color: white;
+            &:hover i {
+                opacity: 1; // Make the i element fully visible when a is hovered
             }
-
+            &:hover p {
+                opacity: 1;
+            }
         }
-           
-        
     }
+    
+    .coworker-second-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10em;
+    
+        .solo {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+    
+            .person-tekst {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+    
+                .name {
+                    font-size: 25px;
+                }
+                .work {
+                    font-size: 20px;
+                }
+                .contact-info {
+                    display: flex;
+                    gap: 50px;
+                    margin-top: 40px;
+    
+                    div {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: $black-color;
+                        font-family: $font-overskrift;
+                        font-size: 18px;
+                    }
+                }
+            }
+            img {
+                object-fit: cover;
+                height: 400px;
+                width: 400px;
+                border-radius: 30px;
+            }
+        }
+    }
+    
+
+
+    
 
 
   //Footer
@@ -499,12 +542,15 @@ main {
         background-image: url('../img/hero-bg-mobile.jpg');
         background-size: cover;
         grid-template-columns: 1fr;
-        padding: 40px 20px 0px 20px;
-        grid-template-rows: 1fr 1fr;
+        padding: 20px 20px 0px 20px;
+        grid-template-rows: 0.7fr 1fr;
         gap: 10px;
         height: 92vh;
+        div {
+            gap: 15px;
+        }
 
-        img{
+        video{
             order: 2;
         }
 
@@ -513,9 +559,7 @@ main {
         }
     }
 
-    .cases {
-        margin-bottom: 100vh;
-    }
+
 
     footer {
         grid-template-columns: 1fr;
