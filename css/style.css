@@ -201,6 +201,7 @@ main {
 }
 .hero-omos img {
   max-width: 100%;
+  height: 70%;
 }
 .hero-omos div h1 {
   font-size: 5vw;
