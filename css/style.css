@@ -144,7 +144,7 @@ main {
   background-size: cover;
   background-position: center;
 }
-.hero video {
+.hero img {
   max-width: 100%;
   width: 100%;
 }
