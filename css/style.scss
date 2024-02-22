@@ -74,6 +74,30 @@ body{
         }
 }
 
+ .sighej-container {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    background-image: url('../img/sighej-bg.jpg');
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    .sighej-content{
+        div {
+            .overskrift {
+
+            }
+        }
+    }
+ }
+
+  
+
+    /* CSS styles for wave */
+    .wave {
+        cursor: pointer;
+    }
 .header-mobile {
     display: none;
 }

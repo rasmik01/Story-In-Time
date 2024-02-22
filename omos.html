@@ -32,7 +32,47 @@
 
         </div>
 
-        <div class="sighej-container"></div>
+        <div class="sighej-container">
+            <div class="sighej-content">
+                <div>
+                    <div class="overskrift">
+                        <img src="img/hand_sighej.png" alt="sig hej hånd">
+                        <p class="overskrift-sighej"></p>
+                    </div>
+                    <p>Vi hjælper med at fortælle din story...</p>
+                </div>
+
+                <div>
+                    <div>
+                        <p>Skriv til os</p>
+                        <div>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:kontakt@storyintime.dk"></a>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Find os</p>
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <a href="">Bolykkelses vej 35, <br> 7100 Vejle</a>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Ring til os</p>
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <a href="tel:+4522256222">22256222</a>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Hvad har vi lavet?</p>
+                        <div>
+                            <a class="btn" href="cases.html">Se vores cases</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -105,11 +145,11 @@
                         <div class="contact-info">
                             <div>
                                 <i class="fa-solid fa-phone"></i>
-                                <a href="tel:+4500000000">24526722</a>
+                                <a href="tel:+4500000000">24667243</a>
                             </div>
                             <div>
                                 <i class="fa-solid fa-envelope"></i>
-                                <a href="mailto:michaeldang@storyintime.dk">michaeldang@storyintime.dk</a>
+                                <a href="mailto:mia@storyintime.dk">mia@storyintime.dk</a>
                             </div>
                         </div>
                     </div>
@@ -124,11 +164,11 @@
                         <div class="contact-info">
                             <div>
                                 <i class="fa-solid fa-phone"></i>
-                                <a href="tel:+4500000000">24526722</a>
+                                <a href="tel:+4500000000">24312295</a>
                             </div>
                             <div>
                                 <i class="fa-solid fa-envelope"></i>
-                                <a href="mailto:michaeldang@storyintime.dk">michaeldang@storyintime.dk</a>
+                                <a href="mailto:rasmus@storyintime.dk">rasmus@storyintime.dk</a>
                             </div>
                         </div>
                     </div>
@@ -142,11 +182,11 @@
                         <div class="contact-info">
                             <div>
                                 <i class="fa-solid fa-phone"></i>
-                                <a href="tel:+4500000000">24526722</a>
+                                <a href="tel:+4500000000">54327739</a>
                             </div>
                             <div>
                                 <i class="fa-solid fa-envelope"></i>
-                                <a href="mailto:michaeldang@storyintime.dk">michaeldang@storyintime.dk</a>
+                                <a href="mailto:sarah@storyintime.dk">sarah@storyintime.dk</a>
                             </div>
                         </div>
                     </div>
@@ -160,11 +200,11 @@
                         <div class="contact-info">
                             <div>
                                 <i class="fa-solid fa-phone"></i>
-                                <a href="tel:+4500000000">24526722</a>
+                                <a href="tel:+4500000000">94234612</a>
                             </div>
                             <div>
                                 <i class="fa-solid fa-envelope"></i>
-                                <a href="mailto:michaeldang@storyintime.dk">michaeldang@storyintime.dk</a>
+                                <a href="mailto:william@storyintime.dk">william@storyintime.dk</a>
                             </div>
                         </div>
                     </div>
@@ -242,3 +282,29 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    // JavaScript to handle the click event on wave and sighej elements
+    document.addEventListener('DOMContentLoaded', function () {
+        const waveElement = document.querySelector('.wave');
+        const sighejElement = document.querySelector('a[href="sighej"]');
+        const sighejContainer = document.getElementById('sighejContainer');
+
+        // Function to toggle sighej-container visibility and apply fade-in effect
+        function toggleSighejContainer() {
+            sighejContainer.style.display = 'block'; // Show the container
+            setTimeout(function () {
+                sighejContainer.style.opacity = 1; // Fade in
+            }, 10); // Delay to ensure transition is applied
+        }
+
+        // Click event listeners
+        if (waveElement) {
+            waveElement.addEventListener('click', toggleSighejContainer);
+        }
+        if (sighejElement) {
+            sighejElement.addEventListener('click', toggleSighejContainer);
+        }
+    });
+</script>
+</body>
