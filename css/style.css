@@ -18,6 +18,10 @@ body h1 {
 body p {
   font-family: Helvetica;
 }
+body a {
+  text-decoration: none;
+  color: #2e2e30;
+}
 
 .btn {
   background-color: #D2FF28;
@@ -54,20 +58,90 @@ body p {
 }
 
 .sighej-container {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  background-image: url("../img/sighej-bg.jpg");
-  width: 100%;
-  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  position: fixed; /* or absolute */
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999; /* Adjust as needed */
+  background-image: url("../img/sighej-content.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* CSS styles for wave */
-.wave {
+.sighej-container.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.sighej-container .sighej-close {
+  display: block;
+  color: #2e2e30;
+  font-size: 30px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
   cursor: pointer;
 }
-
+.sighej-container .sighej-content {
+  width: 60%;
+  gap: 150px;
+  display: grid;
+}
+.sighej-container .sighej-content .sighej-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.sighej-container .sighej-content .sighej-title p {
+  font-size: 30px;
+  font-family: Futura PT;
+}
+.sighej-container .sighej-content .sighej-title .overskrift {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.sighej-container .sighej-content .sighej-title .overskrift img {
+  width: 5em;
+}
+.sighej-container .sighej-content .sighej-title .overskrift p {
+  font-size: 4em;
+  font-family: Futura PT;
+}
+.sighej-container .sighej-content .sighej-contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+  text-align: start;
+  justify-content: center;
+}
+.sighej-container .sighej-content .sighej-contact div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Futura PT;
+  font-size: 20px;
+  width: 100%;
+}
+.sighej-container .sighej-content .sighej-contact div p {
+  font-family: Futura PT;
+  font-size: 30px;
+}
+.sighej-container .sighej-content .sighej-contact div div {
+  flex-direction: row;
+  gap: 15px;
+}
+.sighej-container .sighej-content .sighej-contact div div a {
+  color: #2e2e30;
+  text-decoration: none;
+}
 .header-mobile {
   display: none;
 }
@@ -89,9 +163,26 @@ body p {
   gap: 100px;
 }
 .header-computer li {
-  font-family: Futura PT;
-  font-size: 18px;
-  color: #2e2e30;
+  display: inline;
+  margin-right: 20px;
+  position: relative;
+}
+.header-computer li:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3454D1;
+  transition: width 0.3s ease;
+}
+.header-computer li:hover:after {
+  width: 100%;
+}
+.header-computer li.active:after {
+  width: 100%;
 }
 .header-computer a {
   font-family: Futura PT;
@@ -103,6 +194,14 @@ body p {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.header-computer .sighej div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.header-computer .sighej div p {
+  font-family: Futura PT;
 }
 .header-computer .sighej img {
   max-width: 100%;
@@ -190,13 +289,43 @@ main {
   height: 400px;
 }
 
+.cases-container {
+  background-color: white;
+  text-align: center;
+  padding: 50px 75px 0px 75px;
+  margin-bottom: 80vh;
+}
+.cases-container h1 {
+  margin-bottom: 75px;
+}
+.cases-container div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 200px;
+  grid-row-gap: 200px;
+}
+.cases-container div div {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 15px;
+}
+.cases-container div div img {
+  max-width: 100%;
+  border-radius: 20px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .hero-omos {
   display: grid;
   grid-template-columns: 1.1fr 0.5fr;
   gap: 30px;
   align-items: center;
   background-color: white;
-  padding: 0px 75px 0px 75px;
+  padding: 0px 75px 100px 75px;
   height: 100%;
 }
 .hero-omos img {
@@ -221,7 +350,7 @@ aside {
   flex-direction: column;
   gap: 25px;
   position: sticky;
-  top: 7em;
+  top: 3em;
   z-index: 10;
 }
 aside a {
@@ -483,6 +612,39 @@ footer .column-second .sendbesked a {
   }
   .hero h1 {
     font-size: 50px;
+  }
+  .hero-omos {
+    padding: 50px 20px 50px 20px;
+    gap: 10px;
+  }
+  .hero-omos div h1 {
+    font-size: 30px;
+  }
+  aside {
+    display: none;
+  }
+  .coworker {
+    padding: 50px 20px 0px 20px;
+    grid-template-columns: 1fr;
+  }
+  .coworker-second-column {
+    gap: 5em;
+  }
+  .coworker-second-column .solo {
+    flex-direction: column;
+    align-items: start;
+    height: 100%;
+    gap: 3em;
+  }
+  .coworker-second-column .solo .person-tekst {
+    width: 100%;
+  }
+  .coworker-second-column .solo .person-tekst .contact-info {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .coworker-second-column .solo img {
+    align-self: center;
   }
   footer {
     grid-template-columns: 1fr;

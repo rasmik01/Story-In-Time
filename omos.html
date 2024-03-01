@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/2a7263a17a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <header id="header">
         <div class="header-computer">
             <a href="index.html">
@@ -17,14 +18,16 @@
             <nav>
                 <ul>
                     <a href="index.html"><li>Forside</li></a>
-                    <a href="#"><li class=>Cases</li></a>
+                    <a href="cases.html"><li class=>Cases</li></a>
                     <a href="omos.html"><li class="active">Om os</li></a>
                 </ul>
             </nav>
-            <div class="sighej">
-                <a class="wave" href=""><img src="img/hand_sighej.png" alt="sig hej hånd"></a>
-                <a href="sighej">Sig hej!</a>
-            </div>
+            <a class="sighej" href="">
+                <div>
+                    <img src="img/hand_sighej.png" alt="sig hej hånd">
+                    <p>Sig hej!</p>
+                </div>
+            </a>
         </div>
         <div class="header-mobile">
             <div class="logo"><a href="index.html"><img class="logo" src="logo/Storyintime-logo.png" alt="Story in Time logo"></div></a>
@@ -32,29 +35,28 @@
 
         </div>
 
-        <div class="sighej-container">
-            <div class="sighej-content">
-                <div>
+        <div class="sighej-container" id="sighejContainer">
+            <a href="#" id="sighejClose" class="sighej-close"><i class="fa-solid fa-circle-xmark"></i></a>            <div class="sighej-content">
+                <div class="sighej-title">
                     <div class="overskrift">
                         <img src="img/hand_sighej.png" alt="sig hej hånd">
-                        <p class="overskrift-sighej"></p>
+                        <p class="overskrift-sighej">Sig hej</p>
                     </div>
                     <p>Vi hjælper med at fortælle din story...</p>
                 </div>
-
-                <div>
+                <div class="sighej-contact">
                     <div>
                         <p>Skriv til os</p>
                         <div>
                             <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:kontakt@storyintime.dk"></a>
+                            <a href="mailto:kontakt@storyintime.dk">kontakt@storyintime.dk </a>
                         </div>
                     </div>
                     <div>
                         <p>Find os</p>
                         <div>
                             <i class="fa-solid fa-location-dot"></i>
-                            <a href="">Bolykkelses vej 35, <br> 7100 Vejle</a>
+                            <a href="">Bolykkelses vej 35, 7100 Vejle</a>
                         </div>
                     </div>
                     <div>
@@ -80,7 +82,7 @@
             <div>
                <h1>Vi står klar til at  fortælle <br>din Story!</h1>
             </div>
-            <img src="animationer/humming.gif" alt="">
+            <img src="animationer/Telefon.gif" alt="">
                
         </section>
 
@@ -282,29 +284,28 @@
             </div>
         </div>
     </footer>
-
     <script>
-    // JavaScript to handle the click event on wave and sighej elements
-    document.addEventListener('DOMContentLoaded', function () {
-        const waveElement = document.querySelector('.wave');
-        const sighejElement = document.querySelector('a[href="sighej"]');
-        const sighejContainer = document.getElementById('sighejContainer');
+document.addEventListener('DOMContentLoaded', function () {
+    const sighej = document.querySelector('.sighej');
+    const sighejContainer = document.getElementById('sighejContainer');
+    const sighejClose = document.querySelector('.sighej-close');
 
-        // Function to toggle sighej-container visibility and apply fade-in effect
-        function toggleSighejContainer() {
-            sighejContainer.style.display = 'block'; // Show the container
-            setTimeout(function () {
-                sighejContainer.style.opacity = 1; // Fade in
-            }, 10); // Delay to ensure transition is applied
-        }
-
-        // Click event listeners
-        if (waveElement) {
-            waveElement.addEventListener('click', toggleSighejContainer);
-        }
-        if (sighejElement) {
-            sighejElement.addEventListener('click', toggleSighejContainer);
-        }
+    sighej.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+        sighejContainer.classList.add('visible');
     });
-</script>
+
+    sighejClose.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default button behavior
+        sighejContainer.classList.remove('visible');
+    });
+});
+
+
+    </script>
+
+
+
+       
+
 </body>

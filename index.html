@@ -16,40 +16,75 @@
         </video>
     </div>
 
-    <script >
-  document.addEventListener("DOMContentLoaded", function() {
-    var preloader = document.querySelector('.preloader');
-    setTimeout(function() {
-        preloader.classList.add('hidden'); // Ændringer tiden på hvor lang tid preloader skal være der
-    }, 1000);
-});
-    </script>
 
-    <header id="header">
-        <div class="header-computer">
-            <a href="index.html">
-                <img src="logo/Storyintime-logo.png" alt="">
-            </a>
-            <nav>
-                <ul>
-                    <a href="#"><li class="active">Forside</li></a>
-                    <a href="#"><li class=>Cases</li></a>
-                    <a href="omos.html"><li class=>Om os</li></a>
-                </ul>
-            </nav>
-            <div class="sighej">
-                <a class="wave" href=""><img src="img/hand_sighej.png" alt="sig hej hånd"></a>
-                <a href="sighej">Sig hej!</a>
+
+<header id="header">
+    <div class="header-computer">
+        <a href="index.html">
+            <img src="logo/Storyintime-logo.png" alt="">
+        </a>
+        <nav>
+            <ul>
+                <a href="index.html"><li class="active">Forside</li></a>
+                <a href="cases.html"><li>Cases</li></a>
+                <a href="omos.html"><li>Om os</li></a>
+            </ul>
+        </nav>
+        <a class="sighej" href="">
+            <div>
+                <img src="img/hand_sighej.png" alt="sig hej hånd">
+                <p>Sig hej!</p>
+            </div>
+        </a>
+    </div>
+    <div class="header-mobile">
+        <div class="logo"><a href="index.html"><img class="logo" src="logo/Storyintime-logo.png" alt="Story in Time logo"></div></a>
+        <div class="menu"><a href="index.html"><img class="menu" src="Ikoner/menu-alt-1-svgrepo-com.svg" alt="Story in Time logo"></div></a>
+
+    </div>
+
+    <div class="sighej-container" id="sighejContainer">
+        <a href="#" id="sighejClose" class="sighej-close"><i class="fa-solid fa-circle-xmark"></i></a>            <div class="sighej-content">
+            <div class="sighej-title">
+                <div class="overskrift">
+                    <img src="img/hand_sighej.png" alt="sig hej hånd">
+                    <p class="overskrift-sighej">Sig hej</p>
+                </div>
+                <p>Vi hjælper med at fortælle din story...</p>
+            </div>
+            <div class="sighej-contact">
+                <div>
+                    <p>Skriv til os</p>
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:kontakt@storyintime.dk">kontakt@storyintime.dk </a>
+                    </div>
+                </div>
+                <div>
+                    <p>Find os</p>
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <a href="">Bolykkelses vej 35, 7100 Vejle</a>
+                    </div>
+                </div>
+                <div>
+                    <p>Ring til os</p>
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <a href="tel:+4522256222">22256222</a>
+                    </div>
+                </div>
+                <div>
+                    <p>Hvad har vi lavet?</p>
+                    <div>
+                        <a class="btn" href="cases.html">Se vores cases</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="header-mobile">
-            <div class="logo"><a href="index.html"><img class="logo" src="logo/Storyintime-logo.png" alt="Story in Time logo"></div></a>
-            <div class="menu"><a href="index.html"><img class="menu" src="Ikoner/menu-alt-1-svgrepo-com.svg" alt="Story in Time logo"></div></a>
+    </div>
+</header>
 
-        </div>
-
-        <div class="sighej-container"></div>
-    </header>
 
     <main>
         <section class="hero">
@@ -136,6 +171,43 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sighej = document.querySelector('.sighej');
+            const sighejContainer = document.getElementById('sighejContainer');
+            const sighejClose = document.querySelector('.sighej-close');
+        
+            sighej.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent default link behavior
+                sighejContainer.classList.add('visible');
+            });
+        
+            sighejClose.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent default button behavior
+                sighejContainer.classList.remove('visible');
+            });
+        });
+    
+        document.addEventListener('DOMContentLoaded', function() {
+      var navigationType = performance.navigation.type;
+
+      if (navigationType === 1) {
+        // If the page is being reloaded, show the preloader
+        document.querySelector('.preloader').style.display = 'flex';
+        setTimeout(function() {
+          document.querySelector('.preloader').style.display = 'none';
+          document.querySelector('.content').style.display = 'block';
+        }, 2000); // Setting a minimum load time of 2 seconds
+      } else {
+        // If the page is being accessed via navigation, hide the preloader
+        document.querySelector('.preloader').style.display = 'none';
+        document.querySelector('.content').style.display = 'block';
+      }
+    });
+        
+            </script>
+        
+        
 
     
 </body>
