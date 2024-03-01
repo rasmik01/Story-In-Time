@@ -371,14 +371,14 @@ main {
     .hero-omos {
         display: grid;
         grid-template-columns: 1.1fr 0.5fr;
-        gap: 30px;
         align-items: center;
         background-color: white;
         padding: 0px 75px 100px 75px;
         height: 100%;
         img {
             max-width: 100%;
-            height: 70%;
+            height: 300px;
+            object-fit: cover;
         }
         div {
             h1 {
