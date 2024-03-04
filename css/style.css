@@ -142,6 +142,7 @@ body a {
   color: #2e2e30;
   text-decoration: none;
 }
+
 .header-mobile {
   display: none;
 }
@@ -264,10 +265,9 @@ main {
 .who-are-we {
   padding: 0px 75px 0px 75px;
   background-color: white;
-  margin-bottom: 80vh;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 50px;
 }
@@ -277,10 +277,14 @@ main {
   gap: 20px;
 }
 .who-are-we div h3 {
-  font-size: 50px;
+  text-align: center;
+  font-size: 7vw;
+  color: #3454D1;
 }
-.who-are-we video {
-  justify-self: center;
+
+.video-section {
+  height: 100%;
+  margin-bottom: 80vh;
 }
 
 .cases-container {
@@ -605,6 +609,33 @@ footer .column-second .sendbesked a {
   }
   .hero h1 {
     font-size: 50px;
+  }
+  .cases-container {
+    margin-bottom: 95vh;
+    padding: 0px 15px 0px 15px;
+  }
+  .cases-container h1 {
+    font-size: 50px;
+  }
+  .cases-container .cases-section {
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 20px;
+  }
+  .cases-container .cases-section div {
+    padding: 10px;
+  }
+  .cases-container .cases-section div h2 {
+    font-size: 20px;
+  }
+  .cases-container .cases-section div img {
+    height: 20vh;
+    width: 100%;
   }
   .hero-omos {
     padding: 50px 20px 50px 20px;

@@ -167,9 +167,7 @@ body{
             }
         }
     }
-    &.fullscreen {
-      
-    }
+
 }
 
 .header-mobile {
@@ -310,10 +308,9 @@ main {
   .who-are-we {
     padding: 0px 75px 0px 75px;
     background-color: white;
-    margin-bottom: 80vh;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 50px;
     div {
@@ -322,13 +319,21 @@ main {
         gap: 20px;
 
         h3{ 
-            font-size: 50px;
+            text-align: center;
+            font-size: 7vw;
+            color: $primary-color;
+
         }
     }
-    video {
-        justify-self: center;
+}
+
+    .video-section {
+        height: 100%;
+        margin-bottom: 80vh;
+   
+
     }
-  }
+ 
 
     //Cases-side
     .cases-container {
@@ -667,7 +672,6 @@ main {
 
 //Responsive 
   @media only screen and (max-width: $breakpoint-mobile) {
-
     .header-mobile {
         height: 100%;
         display: flex;
@@ -681,11 +685,9 @@ main {
             max-width: 100%;
             width: 40px;
         }
-       
     }
 
     .preloader{
-
         .video-loader {
         scale: 75%;
          }
@@ -717,8 +719,37 @@ main {
     }
 
 
-    //OM os side
+    //Cases side 
+    .cases-container{
+        margin-bottom: 95vh;
+        padding: 0px 15px 0px 15px;
+        h1 {
+            font-size: 50px;
+        }
+        .cases-section{
+            justify-content: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: repeat(4, 1fr);
+            grid-column-gap: 0;
+            grid-row-gap: 20px;
+            div {
+                padding: 10px;
+                h2 {
+                    font-size: 20px;
+                }
+                img {
+                    height: 20vh;
+                    width: 100%;
+                }
+            }
+        }
+        }
 
+
+    //OM os side
     .hero-omos {
         padding: 50px 20px 50px 20px;
         gap: 10px;
@@ -768,7 +799,7 @@ main {
 
 
 
-
+//responsive footer
     footer {
         grid-template-columns: 1fr;
         width: 100%;
