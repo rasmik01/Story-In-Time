@@ -379,6 +379,12 @@ main {
                 font-family: $font-overskrift;
                 font-size: 20px;
             }
+            img {
+                max-width: 100%;
+                width: 100px;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
     img {

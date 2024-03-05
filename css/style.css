@@ -332,6 +332,13 @@ main {
   font-family: Futura PT;
   font-size: 20px;
 }
+.who-are-we div div img {
+  max-width: 100%;
+  width: 100px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .who-are-we img {
   max-width: 100%;
 }
