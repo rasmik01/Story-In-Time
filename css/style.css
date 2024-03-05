@@ -257,9 +257,57 @@ main {
 
 .scroll-container {
   background-color: #3454D1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   height: 100vh;
+  gap: 20px;
+  padding: 0px 20px 0px 20px;
+  justify-content: center;
+  align-items: center;
+}
+.scroll-container div {
   position: relative;
-  z-index: 2;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 40px 75px 20px 75px;
+  gap: 20px;
+}
+.scroll-container div .number {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  font-family: Futura PT;
+  font-size: 20px;
+  background-color: #D2FF28;
+  border-radius: 100%;
+  color: #2e2e30;
+  text-align: center;
+  padding: 5px 5px 5px 7px;
+  border: 1.5px solid #2e2e30;
+  box-shadow: 3px 3px;
+}
+.scroll-container div .two {
+  color: white;
+  background-color: #F71735;
+  border: 1.5px solid #2e2e30;
+  box-shadow: #2e2e30 3px 3px;
+}
+.scroll-container div .tree {
+  color: white;
+  background-color: #3454D1;
+  border: 1.5px solid #2e2e30;
+  box-shadow: #2e2e30 3px 3px;
+}
+.scroll-container div img {
+  max-width: 100%;
+  padding-bottom: 20px;
+}
+.scroll-container div h3 {
+  font-size: 30px;
 }
 
 .who-are-we {
@@ -277,9 +325,15 @@ main {
   gap: 20px;
 }
 .who-are-we div h3 {
-  text-align: center;
-  font-size: 7vw;
-  color: #3454D1;
+  font-size: 5vw;
+  color: #2e2e30;
+}
+.who-are-we div div p {
+  font-family: Futura PT;
+  font-size: 20px;
+}
+.who-are-we img {
+  max-width: 100%;
 }
 
 .video-section {
