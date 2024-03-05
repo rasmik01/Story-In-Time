@@ -477,12 +477,15 @@ aside a:hover p {
   font-family: Futura PT;
   font-size: 18px;
 }
-.coworker-second-column .solo img {
+.coworker-second-column .solo .video-div {
+  border-radius: 30px;
+  overflow: hidden;
+}
+.coworker-second-column .solo .video-div video {
+  border-radius: 30px;
+  overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 400px;
-  width: 300px;
-  border-radius: 30px;
 }
 
 footer {

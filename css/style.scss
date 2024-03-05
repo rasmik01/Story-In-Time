@@ -538,13 +538,18 @@ main {
                     }
                 }
             }
-            img {
-                object-fit: cover;
-                height: 400px;
-                width: 300px;
+        
+            .video-div {
                 border-radius: 30px;
-                
+                overflow: hidden;
+                video {
+                    border-radius: 30px;
+                    overflow: hidden;
+                    object-fit: cover;
+              
             }
+            }
+               
         }
     }
     
