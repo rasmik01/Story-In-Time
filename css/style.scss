@@ -1,6 +1,6 @@
 //Variabler
 $bg-color: #fff;
-$font-overskrift: Futura PT;
+$font-overskrift: "Futura-PT";
 $font-p: Helvetica;
 
 //Colors
@@ -18,6 +18,8 @@ $breakpoint-tablet: 1080px;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-style: normal;
+    font-synthesis: none
 }
 
 body{
@@ -36,6 +38,7 @@ body{
     a{
         text-decoration: none;
         color: $black-color;
+        font-weight: bold;
     }
 
     overflow-y: scroll;
@@ -316,7 +319,7 @@ main {
             flex-direction: column;
             height: 550px;
             border-radius: 10px;
-            padding: 40px 75px 40px 75px;
+            padding: 40px 50px 40px 50px;
             gap: 20px;
             .number {
                 position: absolute;
@@ -349,6 +352,7 @@ main {
             img{
                 max-width: 100%;
                 padding-bottom: 20px;
+                width: 100%;
                 height: 325px;
                 
                 object-fit: cover;
@@ -379,7 +383,7 @@ main {
   .who-are-we {
     padding: 0px 75px 0px 75px;
     background-color: white;
-    height: 90vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -395,15 +399,18 @@ main {
         }
 
         div {
+            display: flex;
+            flex-direction: column;
             p {
                 font-family: $font-overskrift;
-                font-size: 20px;
+                font-size: 18px;
             }
             img {
                 max-width: 100%;
                 width: 100px;
                 height: 100%;
                 object-fit: cover;
+                margin-left: 75px ;
             }
         }
     }
@@ -422,7 +429,6 @@ main {
         video {
             width: 100%;
             height: 100%;
-            object-fit: cover;
         }
         .play-button {
             position: absolute;
@@ -801,6 +807,9 @@ main {
             max-width: 100%;
             width: 40px;
         }
+        .menu {
+            transform: rotate(180deg);
+        }
     }
 
     .preloader{
@@ -837,6 +846,9 @@ main {
         grid-template-columns: repeat(1, 1fr);
         height: 100%;
         padding-bottom: 50px;
+        div {
+            padding: 40px;
+        }
     }
 
     .who-are-we {
@@ -922,6 +934,7 @@ main {
                 .contact-info {
                     flex-direction: column;
                     gap: 1em;
+                    margin-top: 0;
                 }
             }
 
@@ -931,9 +944,21 @@ main {
         }
     }
 
+    .video-section {
+        padding: 50px 20px 50px 20px;
+        height: fit-content;
+        margin-bottom: 95vh;
+        .play-button {
+            left: 40%;
+            top: 40%;
+            transform: scale(70%);
+        }
+    }
+
     .video-div {
         width: 100%;
         object-fit: cover;
+        padding: 0;
         video {
             object-fit: cover;
             justify-content: center;

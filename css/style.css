@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  font-style: normal;
+  font-synthesis: none;
 }
 
 body {
@@ -9,7 +11,7 @@ body {
   overflow-x: hidden;
 }
 body h1, body h2, body h3, body h4, body h5 {
-  font-family: Futura PT;
+  font-family: "Futura-PT";
   color: #2e2e30;
 }
 body h1 {
@@ -21,12 +23,13 @@ body p {
 body a {
   text-decoration: none;
   color: #2e2e30;
+  font-weight: bold;
 }
 
 .btn {
   background-color: #D2FF28;
   color: #2e2e30;
-  font-family: Futura PT;
+  font-family: "Futura-PT";
   text-decoration: none;
   text-align: center;
   padding: 16px 32px 16px 32px;
@@ -99,7 +102,7 @@ body a {
 }
 .sighej-container .sighej-content .sighej-title p {
   font-size: 30px;
-  font-family: Futura PT;
+  font-family: "Futura-PT";
 }
 .sighej-container .sighej-content .sighej-title .overskrift {
   display: flex;
@@ -111,7 +114,7 @@ body a {
 }
 .sighej-container .sighej-content .sighej-title .overskrift p {
   font-size: 4em;
-  font-family: Futura PT;
+  font-family: "Futura-PT";
 }
 .sighej-container .sighej-content .sighej-contact {
   display: grid;
@@ -126,12 +129,12 @@ body a {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-family: Futura PT;
+  font-family: "Futura-PT";
   font-size: 20px;
   width: 100%;
 }
 .sighej-container .sighej-content .sighej-contact div p {
-  font-family: Futura PT;
+  font-family: "Futura-PT";
   font-size: 30px;
 }
 .sighej-container .sighej-content .sighej-contact div div {
@@ -186,7 +189,7 @@ body a {
   width: 100%;
 }
 .header-computer a {
-  font-family: Futura PT;
+  font-family: "Futura-PT";
   font-size: 18px;
   color: #2e2e30;
   text-decoration: none;
@@ -202,7 +205,7 @@ body a {
   gap: 5px;
 }
 .header-computer .sighej div p {
-  font-family: Futura PT;
+  font-family: "Futura-PT";
 }
 .header-computer .sighej img {
   max-width: 100%;
@@ -273,14 +276,14 @@ main {
   flex-direction: column;
   height: 550px;
   border-radius: 10px;
-  padding: 40px 75px 40px 75px;
+  padding: 40px 50px 40px 50px;
   gap: 20px;
 }
 .scroll-container div .number {
   position: absolute;
   left: 7px;
   top: 7px;
-  font-family: Futura PT;
+  font-family: "Futura-PT";
   font-size: 20px;
   background-color: #D2FF28;
   border-radius: 100%;
@@ -305,6 +308,7 @@ main {
 .scroll-container div img {
   max-width: 100%;
   padding-bottom: 20px;
+  width: 100%;
   height: 325px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -329,7 +333,7 @@ main {
 .who-are-we {
   padding: 0px 75px 0px 75px;
   background-color: white;
-  height: 90vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -344,9 +348,13 @@ main {
   font-size: 5vw;
   color: #2e2e30;
 }
+.who-are-we div div {
+  display: flex;
+  flex-direction: column;
+}
 .who-are-we div div p {
-  font-family: Futura PT;
-  font-size: 20px;
+  font-family: "Futura-PT";
+  font-size: 18px;
 }
 .who-are-we div div img {
   max-width: 100%;
@@ -354,6 +362,7 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-left: 75px;
 }
 .who-are-we img {
   max-width: 100%;
@@ -370,8 +379,6 @@ main {
 .video-section video {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .video-section .play-button {
   position: absolute;
@@ -461,7 +468,7 @@ aside a div {
   gap: 75px;
 }
 aside a div p {
-  font-family: Futura PT;
+  font-family: "Futura-PT";
   font-size: 20px;
   opacity: 70%;
 }
@@ -515,7 +522,7 @@ aside a:hover p {
 .coworker-second-column .solo .person-tekst .contact-info a {
   text-decoration: none;
   color: #2e2e30;
-  font-family: Futura PT;
+  font-family: "Futura-PT";
   font-size: 18px;
 }
 .coworker-second-column .solo .video-div {
@@ -621,7 +628,7 @@ footer .column-first .oplysninger i {
   background-color: none;
 }
 footer .column-first .oplysninger p {
-  font-family: Futura PT;
+  font-family: "Futura-PT";
   color: white;
   font-size: 16px;
 }
@@ -649,7 +656,7 @@ footer .column-second .footer-menu ul {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  font-family: Futura PT;
+  font-family: "Futura-PT";
   list-style-type: none;
   font-size: 30px;
 }
@@ -675,7 +682,7 @@ footer .column-second .sendbesked i, footer .column-second .sendbesked a {
   font-size: 20px;
 }
 footer .column-second .sendbesked a {
-  font-family: Futura PT;
+  font-family: "Futura-PT";
   text-decoration: none;
 }
 
@@ -692,6 +699,9 @@ footer .column-second .sendbesked a {
   .header-mobile .logo, .header-mobile .menu {
     max-width: 100%;
     width: 40px;
+  }
+  .header-mobile .menu {
+    transform: rotate(180deg);
   }
   .preloader .video-loader {
     scale: 75%;
@@ -718,6 +728,9 @@ footer .column-second .sendbesked a {
     grid-template-columns: repeat(1, 1fr);
     height: 100%;
     padding-bottom: 50px;
+  }
+  .scroll-container div {
+    padding: 40px;
   }
   .who-are-we {
     grid-template-columns: 1fr;
@@ -788,14 +801,27 @@ footer .column-second .sendbesked a {
   .coworker-second-column .solo .person-tekst .contact-info {
     flex-direction: column;
     gap: 1em;
+    margin-top: 0;
   }
   .coworker-second-column .solo img {
     align-self: center;
+  }
+  .video-section {
+    padding: 50px 20px 50px 20px;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 95vh;
+  }
+  .video-section .play-button {
+    left: 40%;
+    top: 40%;
+    transform: scale(70%);
   }
   .video-div {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    padding: 0;
   }
   .video-div video {
     -o-object-fit: cover;
