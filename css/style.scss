@@ -1,6 +1,6 @@
 //Variabler
 $bg-color: #fff;
-$font-overskrift: Futura PT;
+$font-overskrift: "Futura-PT";
 $font-p: Helvetica;
 
 //Colors
@@ -318,7 +318,7 @@ main {
             flex-direction: column;
             height: 550px;
             border-radius: 10px;
-            padding: 40px 75px 40px 75px;
+            padding: 40px 50px 40px 50px;
             gap: 20px;
             .number {
                 position: absolute;
@@ -351,7 +351,7 @@ main {
             img{
                 max-width: 100%;
                 padding-bottom: 20px;
-                height: 325px;
+                width: 100%;
                 
                 object-fit: cover;
             }
@@ -804,6 +804,9 @@ main {
         .logo, .menu{
             max-width: 100%;
             width: 40px;
+        }
+        .menu {
+            transform: rotate(180deg);
         }
     }
 
