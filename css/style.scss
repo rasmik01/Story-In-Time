@@ -12,6 +12,7 @@ $black-color: #2e2e30;
 
 //Responsive 
 $breakpoint-mobile: 768px;
+$breakpoint-tablet: 1080px
 
 *{
     margin: 0;
@@ -276,6 +277,7 @@ main {
   }
   
   .hero {
+    padding: 0px 75px 0px 75px;
     z-index: 3; 
     height: 90vh;
     display: grid;
@@ -957,10 +959,14 @@ main {
                 }
             }
 
-        }
-
-    
-
-           
+        }     
     }
   }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    .scroll-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+  }
+
