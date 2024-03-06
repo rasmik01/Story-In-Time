@@ -329,7 +329,7 @@ main {
 .who-are-we {
   padding: 0px 75px 0px 75px;
   background-color: white;
-  height: 90vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -344,9 +344,13 @@ main {
   font-size: 5vw;
   color: #2e2e30;
 }
+.who-are-we div div {
+  display: flex;
+  flex-direction: column;
+}
 .who-are-we div div p {
   font-family: Futura PT;
-  font-size: 20px;
+  font-size: 18px;
 }
 .who-are-we div div img {
   max-width: 100%;
@@ -354,6 +358,7 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-left: 75px;
 }
 .who-are-we img {
   max-width: 100%;
@@ -370,8 +375,6 @@ main {
 .video-section video {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .video-section .play-button {
   position: absolute;
@@ -719,6 +722,9 @@ footer .column-second .sendbesked a {
     height: 100%;
     padding-bottom: 50px;
   }
+  .scroll-container div {
+    padding: 40px;
+  }
   .who-are-we {
     grid-template-columns: 1fr;
     padding: 0px 20px 0px 20px;
@@ -788,14 +794,27 @@ footer .column-second .sendbesked a {
   .coworker-second-column .solo .person-tekst .contact-info {
     flex-direction: column;
     gap: 1em;
+    margin-top: 0;
   }
   .coworker-second-column .solo img {
     align-self: center;
+  }
+  .video-section {
+    padding: 50px 20px 50px 20px;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 95vh;
+  }
+  .video-section .play-button {
+    left: 40%;
+    top: 40%;
+    transform: scale(70%);
   }
   .video-div {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    padding: 0;
   }
   .video-div video {
     -o-object-fit: cover;
