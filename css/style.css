@@ -23,6 +23,7 @@ body p {
 body a {
   text-decoration: none;
   color: #2e2e30;
+  font-weight: bold;
 }
 
 .btn {
@@ -308,6 +309,7 @@ main {
   max-width: 100%;
   padding-bottom: 20px;
   width: 100%;
+  height: 325px;
   -o-object-fit: cover;
      object-fit: cover;
 }
