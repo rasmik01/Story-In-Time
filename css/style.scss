@@ -829,7 +829,7 @@ main {
         padding: 20px 20px 100px 20px;
         grid-template-rows: 0.7fr 1fr;
         gap: 10px;
-        height: 92vh;
+        height: 100%;
         div {
         }
 
@@ -848,6 +848,7 @@ main {
         padding-bottom: 50px;
         div {
             padding: 40px;
+            height: 100%;
         }
     }
 
