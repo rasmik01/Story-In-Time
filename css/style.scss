@@ -314,9 +314,9 @@ main {
             background-color: white;
             display: flex;
             flex-direction: column;
-            height: fit-content;
+            height: 500px;
             border-radius: 10px;
-            padding: 40px 75px 20px 75px;
+            padding: 40px 75px 40px 75px;
             gap: 20px;
             .number {
                 position: absolute;
@@ -351,7 +351,21 @@ main {
                 padding-bottom: 20px;
             }
             h3 {
-                font-size: 30px;
+                font-size: 25px;
+            }
+            i {
+                position: absolute;
+                bottom: 7px;
+                right: 7px;
+                font-size: 20px;
+                background-color: $secondary-color;
+                border-radius: 100%;
+                color: $black-color;
+                text-align: center;
+                padding: 5px 5px 5px 7px;
+                border: 1.5px solid $black-color;
+                box-shadow: 3px 3px;
+               
             }
        
   }
