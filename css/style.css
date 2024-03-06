@@ -271,7 +271,7 @@ main {
   background-color: white;
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: 550px;
   border-radius: 10px;
   padding: 40px 75px 40px 75px;
   gap: 20px;
@@ -305,14 +305,17 @@ main {
 .scroll-container div img {
   max-width: 100%;
   padding-bottom: 20px;
+  height: 325px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .scroll-container div h3 {
   font-size: 25px;
 }
 .scroll-container div i {
   position: absolute;
-  bottom: 7px;
-  right: 7px;
+  bottom: 10px;
+  right: 10px;
   font-size: 20px;
   background-color: #D2FF28;
   border-radius: 100%;
