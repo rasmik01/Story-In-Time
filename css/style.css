@@ -480,12 +480,14 @@ aside a:hover p {
 .coworker-second-column .solo .video-div {
   border-radius: 30px;
   overflow: hidden;
+  display: flex;
 }
 .coworker-second-column .solo .video-div video {
   border-radius: 30px;
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
+  justify-self: center;
 }
 
 footer {
@@ -746,6 +748,16 @@ footer .column-second .sendbesked a {
   }
   .coworker-second-column .solo img {
     align-self: center;
+  }
+  .video-div {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .video-div video {
+    -o-object-fit: cover;
+       object-fit: cover;
+    justify-content: center;
   }
   footer {
     grid-template-columns: 1fr;

@@ -542,10 +542,12 @@ main {
             .video-div {
                 border-radius: 30px;
                 overflow: hidden;
+                display: flex;
                 video {
                     border-radius: 30px;
                     overflow: hidden;
                     object-fit: cover;
+                    justify-self: center;
               
             }
             }
@@ -880,6 +882,15 @@ main {
             img {
                 align-self: center;
             }
+        }
+    }
+
+    .video-div {
+        width: 100%;
+        object-fit: cover;
+        video {
+            object-fit: cover;
+            justify-content: center;
         }
     }
 
