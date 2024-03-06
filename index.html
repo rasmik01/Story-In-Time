@@ -132,7 +132,7 @@
                    </p>
                     <p> Hvad adskiller os fra resten? For det første er vores tilgang til markedsføring dybt forankret i kunsten at fortælle historier. Vi tror på, at den bedste måde at skabe forbindelse til dine kunder på er gennem autentiske og engagerende fortællinger, der resonerer med dem på et følelsesmæssigt niveau.</p>
                 <div>
-                    <a class="btn" href="#video"><p>Se videoen nedenfor</p></a>
+                    <a class="btn" href="#myVideo"><p>Se videoen nedenfor</p></a>
                     <img src="animationer/animeretpil.GIF" alt="">
                 </div>
             </div>
@@ -140,8 +140,10 @@
         </section>
 
         <section id="video" class="video-section">
-            <video src="Video/Story in Time Done .mov" width="100%" height="100%" controls poster="img/Thumbnail/Skærmbillede 2024-03-04 kl. 13.59.39.png"></video>
+            <video id="myVideo" src="Video/Story in Time Done .mov" width="100%" height="100%" controls poster="img/Thumbnail/Skærmbillede 2024-03-04 kl. 13.59.39.png"></video>
+            <div class="play-button" id="playButton"><i class="fa-solid fa-circle-play"></i></div>
         </section>
+        
         
     </main>
 
@@ -243,9 +245,28 @@
         document.querySelector('.content').style.display = 'block';
       }
     });
+
+    document.getElementById("playButton").addEventListener("click", function() {
+  var video = document.getElementById("myVideo");
+  var playButton = document.getElementById("playButton");
+  
+  if (video.paused) {
+    video.play();
+    playButton.style.display = "none"; // Hide the play button when video is playing
+  } else {
+    video.pause();
+    playButton.style.display = "block"; // Show the play button when video is paused
+  }
+});
+
+document.getElementById("myVideo").addEventListener("pause", function() {
+  var playButton = document.getElementById("playButton");
+  playButton.style.display = "block"; // Show the play button when video is paused
+});
+
     
         
-            </script>
+</script>
         
         
 
