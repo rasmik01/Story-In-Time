@@ -235,6 +235,7 @@ main {
 }
 
 .hero {
+  padding: 0px 75px 0px 75px;
   z-index: 3;
   height: 90vh;
   display: grid;
@@ -802,5 +803,10 @@ footer .column-second .sendbesked a {
   }
   footer .column-second .footer-menu ul {
     font-size: 20px;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .scroll-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }/*# sourceMappingURL=style.css.map */
