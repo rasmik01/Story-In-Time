@@ -362,6 +362,7 @@ main {
 .video-section {
   height: 100%;
   margin-bottom: 80vh;
+  background-color: white;
 }
 
 .cases-container {
